@@ -19,25 +19,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ssh"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/sstp"
+Romba89="raw.githubusercontent.com//aost/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ssr"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/shadowsocks"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/wireguard"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/xray"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ipsec"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/backup"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/backup"
 # Link Hosting Kalian Untuk Websocket
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/websocket"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ohp"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -71,16 +71,16 @@ wget https://${Romba89}/aost/main/websocket/edu.sh && chmod +x edu.sh && ./edu.s
 # Ohp Server
 wget https://${Romba89}/aost/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Install SlowDNS
-wget https://raw.githubusercontent.com/Romba89/aost/tree/main/SLDNS/install-sldns && chmod +x install-sldns && ./install-sldns
+wget https://raw.githubusercontent.com/Romba89/aost/main/SLDNS/install-sldns && chmod +x install-sldns && ./install-sldns
 # Informasi IP Saya dan Semua Port TCP UDP
-# wget https://raw.githubusercontent.com/Romba89/aost/tree/main/ipsaya.sh && chmod +x ipsaya.sh
+# wget https://raw.githubusercontent.com/Romba89/aost/main/ipsaya.sh && chmod +x ipsaya.sh
 #
 # install xray sl-grpc
-# wget https://raw.githubusercontent.com/Romba89/aost/tree/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
+# wget https://raw.githubusercontent.com/Romba89/aost/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
 # install xray grpc
-# wget https://raw.githubusercontent.com/Romba89/aost/tree/main/grpc/xray-grpc.sh && chmod +x xray-grpc.sh && screen -S xray-grpc ./xray-grpc.sh
+# wget https://raw.githubusercontent.com/Romba89/aost/main/grpc/xray-grpc.sh && chmod +x xray-grpc.sh && screen -S xray-grpc ./xray-grpc.sh
 # install shadowsocks plugin
-# wget https://raw.githubusercontent.com/Romba89/aost/tree/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
+# wget https://raw.githubusercontent.com/Romba89/aost/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
  
 
 rm -f /root/ssh-vpn.sh
