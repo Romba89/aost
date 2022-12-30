@@ -54,22 +54,22 @@ mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
 wget https://${Romba89}/aost/main/ssh/slhost.sh && chmod +x slhost.sh && ./slhost.sh
 #install xray
-wget https://${Romba89}/aost/main/ssh/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+wget https://${Romba89}/aost/main/xray/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install ssh ovpn
 wget https://${Romba89}/aost/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${Romba89}/aost/main/ssh/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://${Romba89}/aost/main/sstp/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://${Romba89}/aost/main/ssh/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://${Romba89}/aost/main/ssh/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://${Romba89}/aost/main/ssr/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://${Romba89}/aost/main/shadowsocks/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://${Romba89}/aost/main/ssh/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://${Romba89}/aost/main/wireguard/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install L2TP
-wget https://${Romba89}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://${Romba89}/aost/main/ssh/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://${Romba89}/aost/main/ipsec/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://${Romba89}/aost/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Websocket
-wget https://${Romba89}/aost/main/ssh/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://${Romba89}/aost/main/websocket/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
-wget https://${Romba89}/aost/main/ssh/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${Romba89}/aost/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Install SlowDNS
 wget https://raw.githubusercontent.com/Romba89/aost/tree/main/SLDNS/install-sldns && chmod +x install-sldns && ./install-sldns
 # Informasi IP Saya dan Semua Port TCP UDP
