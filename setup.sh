@@ -19,25 +19,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ssh"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-Romba89="raw.githubusercontent.com/aost/tree/main/sstp"
+Romba89="raw.githubusercontent.com/aost/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ssr"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/shadowsocks"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/wireguard"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/xray"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ipsec"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/backup"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/backup"
 # Link Hosting Kalian Untuk Websocket
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/websocket"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-Romba89="raw.githubusercontent.com/Romba89/aost/tree/main/ohp"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
