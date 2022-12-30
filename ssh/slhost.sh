@@ -24,7 +24,7 @@ DOMAIN=dnstt-tunnelws.tk
 SUB_DOMAIN=onichan-${sub}.dnstt-tunnelws.tk
 NS_DOMAIN=zerosl-${sub}.dnstt-tunnelws.tk
 CF_ID=vpsplus90@gmail.com
-CF_KEY=d19d1d186f544692649ddc20988e217e
+CF_KEY=f3354cf77f28314caae880b951ce0abc562f5
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
