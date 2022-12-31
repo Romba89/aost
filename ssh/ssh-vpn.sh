@@ -14,16 +14,16 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 # ==================================================
 # Link Hosting Kalian
-Romba89="raw.githubusercontent.com/Romba89/aost/main/ssh"
+akbarvpn="raw.githubusercontent.com/Romba89/aost/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-Romba89="raw.githubusercontent.com/Romba89/aost/main/xray"
+akbarvpnn="raw.githubusercontent.com/Romba89/aost/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-Romba89n="raw.githubusercontent.com/Romba89/aost/main/trojango"
+akbarvpnnn="raw.githubusercontent.com/Romba89/aost/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-Romba89="raw.githubusercontent.com/Romba89/aost/main/stunnel5"
+akbarvpnnnn="raw.githubusercontent.com/Romba89/aost/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -39,11 +39,11 @@ state=Indonesia
 locality=Indonesia
 organization=infinity
 organizationalunit=infinity
-commonname=localhost
+commonname=cdn.covid19.go.id
 email=hayuk69@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://${Romba89}/password"
+wget -O /etc/pam.d/common-password "https://${akbarvpn}/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -93,7 +93,6 @@ apt-get remove --purge exim4 -y
 
 # install wget and curl
 apt -y install wget curl
-apt -y install net-tools
 
 # Install Requirements Tools
 apt install ruby -y
@@ -143,8 +142,8 @@ echo "neofetch" >> .profile
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-curl https://${Romba89}/nginx.conf > /etc/nginx/nginx.conf
-curl https://${Romba89}/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://${akbarvpn}/nginx.conf > /etc/nginx/nginx.conf
+curl https://${akbarvpn}/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -152,13 +151,13 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://${Romba89}/index.html1"
+wget -O /home/vps/public_html/index.html "https://${akbarvpn}/index.html1"
 /etc/init.d/nginx restart
 cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://${Romba89}/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://${akbarvpn}/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -184,11 +183,11 @@ echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
-# install squid (proxy nya aku matikan)
+# install squid
 cd
-#apt -y install squid3
-#wget -O /etc/squid/squid.conf "https://${Romba89}/squid3.conf"
-#sed -i $MYIP2 /etc/squid/squid.conf
+apt -y install squid3
+wget -O /etc/squid/squid.conf "https://${akbarvpn}/squid3.conf"
+sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
 apt -y install sslh
@@ -243,7 +242,7 @@ rm -rf /root/vnstat-2.6
 
 # install stunnel 5 
 cd /root/
-wget -q -O stunnel5.zip "https://${Romba89}/stunnel5.zip"
+wget -q -O stunnel5.zip "https://${akbarvpnnnn}/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -303,7 +302,7 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${Romba89}/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://${akbarvpnnnn}/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
@@ -328,7 +327,7 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://${Romba89}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://${akbarvpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -347,10 +346,10 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Install BBR
-#wget https://${Romba89}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+#wget https://${akbarvpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
-wget -O /etc/issue.net "https://${Romba89}/issue.net"
+wget -O /etc/issue.net "https://${akbarvpn}/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -371,78 +370,78 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://${Romba89}/addhost.sh"
-wget -O slhost "https://${Romba89}/slhost.sh"
-wget -O about "https://${Romba89}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
-wget -O addssh "https://${Romba89}/addssh.sh"
-wget -O trialssh "https://${Romba89}/trialssh.sh"
-wget -O delssh "https://${Romba89}/delssh.sh"
-wget -O member "https://${Romba89}/member.sh"
-wget -O delexp "https://${Romba89}/delexp.sh"
-wget -O cekssh "https://${Romba89}/cekssh.sh"
-wget -O restart "https://${Romba89}/restart.sh"
-wget -O speedtest "https://${Romba89}/speedtest_cli.py"
-wget -O info "https://${Romba89}/info.sh"
-wget -O ram "https://${Romba89}/ram.sh"
-wget -O renewssh "https://${Romba89}/renewssh.sh"
-wget -O autokill "https://${Romba89}/autokill.sh"
-wget -O ceklim "https://${Romba89}/ceklim.sh"
-wget -O tendang "https://${Romba89}/tendang.sh"
-wget -O clearlog "https://${Romba89}/clearlog.sh"
-wget -O changeport "https://${Romba89}/changeport.sh"
-wget -O portovpn "https://${Romba89}/portovpn.sh"
-wget -O portwg "https://${Romba89}/portwg.sh"
-wget -O porttrojan "https://${Romba89}/porttrojan.sh"
-wget -O portsstp "https://${Romba89}/portsstp.sh"
-wget -O portsquid "https://${Romba89}/portsquid.sh"
-wget -O portvlm "https://${Romba89}/portvlm.sh"
-wget -O wbmn "https://${Romba89}/webmin.sh"
-wget -O xp "https://${Romba89}/xp.sh"
-wget -O swapkvm "https://${Romba89}/swapkvm.sh"
-wget -O addvmess "https://${Romba89}/addv2ray.sh"
-wget -O addvless "https://${Romba89}/addvless.sh"
-wget -O addtrojan "https://${Romba89}/addtrojan.sh"
-wget -O addgrpc "https://${Romba89}/addgrpc.sh"
-wget -O cekgrpc "https://${Romba89}/cekgrpc.sh"
-wget -O delgrpc "https://${Romba89}/delgrpc.sh"
-wget -O renewgrpc "https://${Romba89}/renewgrpc.sh"
-wget -O delvmess "https://${Romba89}/delv2ray.sh"
-wget -O delvless "https://${Romba89}/delvless.sh"
-wget -O deltrojan "https://${Romba89}/deltrojan.sh"
-wget -O cekvmess "https://${Romba89}/cekv2ray.sh"
-wget -O cekvless "https://${Romba89}/cekvless.sh"
-wget -O cektrojan "https://${Romba89}/cektrojan.sh"
-wget -O renewvmess "https://${Romba89}/renewv2ray.sh"
-wget -O renewvless "https://${Romba89}/renewvless.sh"
-wget -O renewtrojan "https://${Romba89}/renewtrojan.sh"
-wget -O certv2ray "https://${Romba89}/certv2ray.sh"
-wget -O addtrgo "https://${Romba89n}/addtrgo.sh"
-wget -O deltrgo "https://${Romba89n}/deltrgo.sh"
-wget -O renewtrgo "https://${Romba89n}/renewtrgo.sh"
-wget -O cektrgo "https://${Romba89n}/cektrgo.sh"
-wget -O portsshnontls "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket/portsshnontls.sh"
-wget -O portsshws "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket/portsshws.sh"
+wget -O addhost "https://${akbarvpn}/addhost.sh"
+wget -O slhost "https://${akbarvpn}/slhost.sh"
+wget -O about "https://${akbarvpn}/about.sh"
+wget -O menu "https://raw.githubusercontent.com/Romba89/aost/main/update/menu.sh"
+wget -O addssh "https://${akbarvpn}/addssh.sh"
+wget -O trialssh "https://${akbarvpn}/trialssh.sh"
+wget -O delssh "https://${akbarvpn}/delssh.sh"
+wget -O member "https://${akbarvpn}/member.sh"
+wget -O delexp "https://${akbarvpn}/delexp.sh"
+wget -O cekssh "https://${akbarvpn}/cekssh.sh"
+wget -O restart "https://${akbarvpn}/restart.sh"
+wget -O speedtest "https://${akbarvpn}/speedtest_cli.py"
+wget -O info "https://${akbarvpn}/info.sh"
+wget -O ram "https://${akbarvpn}/ram.sh"
+wget -O renewssh "https://${akbarvpn}/renewssh.sh"
+wget -O autokill "https://${akbarvpn}/autokill.sh"
+wget -O ceklim "https://${akbarvpn}/ceklim.sh"
+wget -O tendang "https://${akbarvpn}/tendang.sh"
+wget -O clearlog "https://${akbarvpn}/clearlog.sh"
+wget -O changeport "https://${akbarvpn}/changeport.sh"
+wget -O portovpn "https://${akbarvpn}/portovpn.sh"
+wget -O portwg "https://${akbarvpn}/portwg.sh"
+wget -O porttrojan "https://${akbarvpn}/porttrojan.sh"
+wget -O portsstp "https://${akbarvpn}/portsstp.sh"
+wget -O portsquid "https://${akbarvpn}/portsquid.sh"
+wget -O portvlm "https://${akbarvpn}/portvlm.sh"
+wget -O wbmn "https://${akbarvpn}/webmin.sh"
+wget -O xp "https://${akbarvpn}/xp.sh"
+wget -O swapkvm "https://${akbarvpn}/swapkvm.sh"
+wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
+wget -O addvless "https://${akbarvpnn}/addvless.sh"
+wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
+wget -O addgrpc "https://${akbarvpnn}/addgrpc.sh"
+wget -O cekgrpc "https://${akbarvpnn}/cekgrpc.sh"
+wget -O delgrpc "https://${akbarvpnn}/delgrpc.sh"
+wget -O renewgrpc "https://${akbarvpnn}/renewgrpc.sh"
+wget -O delvmess "https://${akbarvpnn}/delv2ray.sh"
+wget -O delvless "https://${akbarvpnn}/delvless.sh"
+wget -O deltrojan "https://${akbarvpnn}/deltrojan.sh"
+wget -O cekvmess "https://${akbarvpnn}/cekv2ray.sh"
+wget -O cekvless "https://${akbarvpnn}/cekvless.sh"
+wget -O cektrojan "https://${akbarvpnn}/cektrojan.sh"
+wget -O renewvmess "https://${akbarvpnn}/renewv2ray.sh"
+wget -O renewvless "https://${akbarvpnn}/renewvless.sh"
+wget -O renewtrojan "https://${akbarvpnn}/renewtrojan.sh"
+wget -O certv2ray "https://${akbarvpnn}/certv2ray.sh"
+wget -O addtrgo "https://${akbarvpnnn}/addtrgo.sh"
+wget -O deltrgo "https://${akbarvpnnn}/deltrgo.sh"
+wget -O renewtrgo "https://${akbarvpnnn}/renewtrgo.sh"
+wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
+wget -O portsshnontls "https://raw.githubusercontent.com/Romba89/aost/main/websocket/portsshnontls.sh"
+wget -O portsshws "https://raw.githubusercontent.com/Romba89/aost/main/websocket/portsshws.sh"
 
-wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
-wget -O sshovpnmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/sshovpn.sh"
-wget -O l2tpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/l2tpmenu.sh"
-wget -O pptpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/pptpmenu.sh"
-wget -O sstpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/sstpmenu.sh"
-wget -O wgmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/wgmenu.sh"
-wget -O ssmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ssmenu.sh"
-wget -O ssrmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ssrmenu.sh"
-wget -O vmessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vmessmenu.sh"
-wget -O vlessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vlessmenu.sh"
-wget -O grpcmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu.sh"
-wget -O grpcupdate "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcupdate.sh"
-wget -O trmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trmenu.sh"
-wget -O trgomenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trgomenu.sh"
-wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/setmenu.sh"
-wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/slowdnsmenu.sh"
-wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/running.sh"
-wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
-wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
+wget -O ipsaya "https://raw.githubusercontent.com/Romba89/aost/main/update/ipsaya.sh"
+wget -O sshovpnmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/sshovpn.sh"
+wget -O l2tpmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/l2tpmenu.sh"
+wget -O pptpmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/pptpmenu.sh"
+wget -O sstpmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/sstpmenu.sh"
+wget -O wgmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/wgmenu.sh"
+wget -O ssmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/ssmenu.sh"
+wget -O ssrmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/ssrmenu.sh"
+wget -O vmessmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/vmessmenu.sh"
+wget -O vlessmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/vlessmenu.sh"
+wget -O grpcmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/grpcmenu.sh"
+wget -O grpcupdate "https://raw.githubusercontent.com/Romba89/aost/main/update/grpcupdate.sh"
+wget -O trmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/trmenu.sh"
+wget -O trgomenu "https://raw.githubusercontent.com/Romba89/aost/main/update/trgomenu.sh"
+wget -O setmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/setmenu.sh"
+wget -O slowdnsmenu "https://raw.githubusercontent.com/Romba89/aost/main/update/slowdnsmenu.sh"
+wget -O running "https://raw.githubusercontent.com/Romba89/aost/main/update/running.sh"
+wget -O updatemenu "https://raw.githubusercontent.com/Romba89/aost/main/update/updatemenu.sh"
+wget -O sl-fix "https://raw.githubusercontent.com/Romba89/aost/main/sslh-fix/sl-fix"
 
 chmod +x sl-fix
 chmod +x ipsaya
@@ -520,7 +519,6 @@ chmod +x renewtrgo
 chmod +x cektrgo
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
-echo "0 1 * * * root delexp" >> /etc/crontab
 echo "10 4 * * * root clearlog && sslh-fix-reboot" >> /etc/crontab
 echo "0 0 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 12 * * * root clearlog && reboot" >> /etc/crontab
