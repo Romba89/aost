@@ -21,7 +21,7 @@ LIGHT='\033[0;37m'
 # Link Hosting Kalian Untuk Ssh Vpn
 Romba89="raw.githubusercontent.com/Romba89/aost/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-Romba89="raw.githubusercontent.com/aost/main/sstp"
+Romba89="raw.githubusercontent.com/Romba89/aost/main/sstp"
 # Link Hosting Kalian Untuk Ssr
 Romba89="raw.githubusercontent.com/Romba89/aost/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
