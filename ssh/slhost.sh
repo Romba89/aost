@@ -17,7 +17,7 @@ sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.dnstt-tunnelws.cf
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 CF_ID=vpsplus90@gmail.com
-CF_KEY=f3354cf77f28314caae880b951ce0abc562f5
+CF_KEY=nIdeBoiX8KZOBSFKlTXs2abd-jYf_x7dMixr26uc
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."

@@ -28,7 +28,7 @@ DOMAIN=dnstt-tunnelws.cf
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c6)
 SUB_DOMAIN=${sub}.dnstt-tunnelws.cf
 CF_ID=d19d1d186f544692649ddc20988e217e
-CF_KEY=ed570224609832d95158daf0f9516daa
+CF_KEY=nIdeBoiX8KZOBSFKlTXs2abd-jYf_x7dMixr26uc
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
