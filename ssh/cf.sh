@@ -27,8 +27,8 @@ apt install jq curl -y
 DOMAIN=dnstt-tunnelws.cf
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c6)
 SUB_DOMAIN=${sub}.dnstt-tunnelws.cf
-CF_ID=vpsplus90@gmail.com
-CF_KEY=f3354cf77f28314caae880b951ce0abc562f5
+CF_ID=d19d1d186f544692649ddc20988e217e
+CF_KEY=ed570224609832d95158daf0f9516daa
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
